@@ -9,7 +9,7 @@ jobs:
           key: deps-{{ checksum "requirements.lock" }}
       - run:
           command: |
-            pip instal l --user -r requirements.lock
+            pip install --user -r requirements.lock
       - save_cache:
           key: deps-{{ checksum "requirements.lock }}
           paths:
