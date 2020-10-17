@@ -12,8 +12,8 @@ jobs:
           pip install --user -r requirements.lock
       - save_cache:
         key: deps-{{ checksum "requirements.lock }}
-        paths:
-          - "~/.local"
+          paths:
+            - "~/.local"
   test:
     docker:
       - image: circleci/python3.7.5
