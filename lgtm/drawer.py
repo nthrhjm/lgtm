@@ -8,7 +8,7 @@ FONT_MAX_SIZE = 256
 FONT_MIN_SIZE = 24
 
 # フォントの格納先のパスは実行環境に合わせて変更する
-FONT_NAME = '/Library/Fonts/Arial Bold.ttf'
+FONT_NAME = '/Library/Fonts/Arial Unicode.ttf'
 FONT_COLOR_WHITE = (255, 255, 255, 0)
 
 # アウトプット関連の定数
@@ -36,7 +36,7 @@ def save_with_message(fp, message):
         if w > 0 and h > 0:
             position = ((image_width - text_width) / 2, (image_height - text_height) / 2)
             # メッセージの描画
-            draw.text(position, message, fill=FONT_COLOR_WHITE,font=font)
+            draw.text(position, message, fill=FONT_COLOR_WHITE, font=font)
             break
         # 画像の保存
-        image.save(OUTPUT_NAME, OUTPUT_FORMAT)
+    image.save(OUTPUT_NAME, OUTPUT_FORMAT)
