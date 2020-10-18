@@ -16,10 +16,10 @@ class LocalImage:
 class RemoteImage:
     """URLから画像を取得する"""
 
-    def __init(self, path):
+    def __init__(self, path):
         self._url = path
 
-    def get_image(self, _url):
+    def get_image(self):
         data = requests.get(self._url)
         # バイトデータをファイルオブジェクトに変換
         return BytesIO(data.content)
@@ -32,7 +32,7 @@ class _LoremFlickr(RemoteImage):
     WIDTH = 800
     HEIGHT = 600
 
-    def __init(self, keyword):
+    def __init__(self, keyword):
         super().__init__(self._build_url(keyword))
 
     def _build_url(self, keyword):
